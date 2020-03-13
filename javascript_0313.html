@@ -4,13 +4,32 @@
 	<meta charset="UTF-8">
 	<title>javascript_0313</title>
 </head>
-<body>
-	<script>
-		document.write('Hello World');
-		document.write(1+1);
-	</script>
-	<input type="button" value="Hi" onclick="alert('this is button')">
-	<input type="text" onchange="alert('내용변했을때')">
-	<input type="text" onkeydown="alert('키 눌렀을때')">
+<body style="background-color:white; color:black;">
+	<!-- <script>
+		// document.write('Hello World');
+		// document.write(1+1);
+		// document.write('helloworld'.length);
+		// document.write('helloworld'.toUpperCase());
+		// document.write('helloworld'.indexOf('o'));
+		// document.write("1"+"1");
+		// var x = 1;
+		// var y = 2;
+		// x = 1000;
+		// y = 1000;
+		// document.write(x+y);
+
+	</script> -->
+	<!-- <input type="button" value="Hi" onclick="alert('this is button')"> -->
+	<!-- <input type="text" onchange="alert('내용변했을때')"> -->
+	<!-- <input type="text" onkeydown="alert('키 눌렀을때')"> -->
+	<input type="button" value="white" onclick="
+	document.querySelector('body').style.backgroundColor='white';
+	document.querySelector('body').style.color='black';
+	">
+	<input type="button" value="black" onclick="
+	document.querySelector('body').style.backgroundColor='black';
+	document.querySelector('body').style.color='white';
+	">
+	text
 </body>
 </html>
