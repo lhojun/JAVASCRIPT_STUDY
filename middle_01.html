@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>middle_01</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Achievement(국어,수학,영어)
+		{
+			this.국어 = 국어;
+			this.수학 = 수학;
+			this.영어 = 영어;
+			Achievement.prototype.sum = function()
+			{
+				let sum = this.국어 + this.수학 + this.영어;
+				this.합계 = sum;
+				return sum;
+			}
+			Achievement.prototype.avg = function()
+			{
+				let avg = this.sum()/3;
+				this.평균 = avg;
+			}
+			this.sum();
+			this.avg();
+		}
+
+		let stA = []
+		stA.push(new Achievement(80,100,30));
+		stA.push(new Achievement(95,65,90));
+		stA.push(new Achievement(40,55,15));
+		stA.push(new Achievement(50,25,65));
+		stA.push(new Achievement(100,75,80));
+
+        for(let i in stA)
+        {
+        	let name = prompt("Enter Your name","");
+        	if(name == null)
+        	{
+        		break;
+        	}
+        	else
+        	{
+        		stA[i].이름 = name;
+        	}
+        }
+        stA.sort(function(a,b)
+        {
+        	return a.합계 > b.합계?-1:a.합계 < b.합계?1:0;
+        })
+
+        console.log("최대 : " + stA[0].이름);
+        console.log("최소 : " + stA[stA.length-1].이름);
+	</script>
+</body>
+</html>
+

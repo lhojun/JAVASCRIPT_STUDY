@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20200404 JS</title>
+</head>
+<body>
+    <script>
+    //     // 익명 함수 -> 이름 붙이지 않고 함수 생성
+    // let func = function() //함수 이름이 없기때문에 변수에 담아서 함수를 호출해야함.
+    // {
+    //    console.log("함수의 첫번째줄");
+    //    console.log("함수의 두번째줄");
+    // }
+    // func();
+    // func();
+    // console.log(func);
+
+    // // 선언 함수 -> 이름을 붙여 함수를 선언 -> 권장됨.
+    // function func() 
+    // {
+    //     console.log("선언함수의 첫번째줄");
+    //     console.log("선언함수의 두번째줄");
+    // }
+    // func();
+    // func();
+    // console.log(func);
+
+    // 화살표 함수 () => {} 
+    // 하나의 표현식을 리턴하는 함수를 만들떄는 중괄호 생략 가능
+    // 익명함수 코드는 대부분 화살표 함수로 대체
+    // let f = () => 
+    // {
+    //     console.log("화살표 함수 첫번째"); 
+    //     console.log("화살표 함수 두번째"); 
+    // }
+    // f();
+    
+    // let f1 = function()
+    // {
+    //     console.log("f1");
+    // }
+    // f1();
+    // (function()
+    // {
+    //     console.log("f2");
+    // }() //익명함수를 변수에 대입하지 않고 즉시 호출 일회용이다.
+    // );
+
+    // function power(x)
+    // {
+    //     if(isNaN(x))
+    //     {
+    //         return 0;
+    //     }
+    //     return x * x;
+    // }
+
+    // console.log(power(10));
+    // console.log(power("s"));
+
+
+    // function print(name, count)
+    // {
+    //     count = count||0;
+    //     name = name||"과일";
+    //     console.log(name + "(이)가 " + count +"개 있습니다");
+    // }
+    // print("사과",5);
+    // print("사과");
+    // print();
+
+
+// let cout = 0;
+// function callTenTimes(callback)
+// {
+//     for(let i=0; i<10; i++)
+//     {
+//         callback(); //함수 호출
+//     }
+// }
+
+// callTenTimes(function()
+// {
+//     cout ++;
+//     alert(cout+"함수 호출");
+// });
+// //callTenTimes의 매개변수로 익명함수를 넣음.
+
+// 표준 내장함수 
+
+// let inputA = "52";
+// console.log(parseInt(inputA)+10);
+// console.log(typeof(inputA));
+
+// let inputB = "52.345";
+// console.log(parseInt(inputB)+10);
+// console.log(parseFloat(inputB)+10);
+
+// let inputB = "1401동";
+// console.log(parseInt(inputB)); //문자열에서 숫자만 추출
+// console.log(inputB);
+
+// let num0 = "0";
+// let num10 = "10";
+// let num100 = "100";
+// let num1000 = "1000";
+// console.log(parseInt(num0,2));
+// console.log(parseInt(num10,2));
+// console.log(parseInt(num100,2));
+// console.log(parseInt(num1000,2));
+// //첫번째 파라미터의 값을 2진수로 읽어서, 그 2진수 값의 10진수를 뱉음
+
+// setTimeout(()=>
+// {
+//     console.log("1초 후 실행");
+// },1000);
+
+// let id = setInterval(()=>
+// {
+//     console.log("1초마다 호출");
+// },1000);
+
+// setTimeout(()=>{
+//     clearInterval(id);
+// },3000); //3초 후 멈춤
+
+// ////////////////////// 안돌아가는 코드
+function func()
+{
+    console.log("선언적함수선언");
+}
+func = function()
+{
+    console.log("익명함수선언");
+}
+// let func;
+
+func();
+////////////////////// 안돌아가는 코드
+
+// let num = 1;
+// let s_num = 1;
+
+// let interval = setInterval(()=>
+// {
+//     console.log(num);
+//     num+=s_num;
+// },1000);
+
+// setTimeout(()=>
+// {
+//     alert(num);
+//     s_num = -1;
+// },5000);
+
+// setTimeout(()=>
+// {
+//     clearInterval(interval);
+// },11000);
+
+
+    </script>
+</body>
+</html>

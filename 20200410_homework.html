@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///////////////////////////////////과제 1
+        // let products=[];
+        
+        // products.push({name:'바나나',price:1200});
+        // products.push({name:'사과',price:2000});
+        // products.push({name:'배',price:3000});
+        // products.push({name:'고구마',price:700});
+        // products.push({name:'감자',price:600});
+        // products.push({name:'수박',price:5000});
+
+        // let sum = 0;
+        // for(let i in products)
+        // {
+        //     console.log(products[i].name);
+        //     sum += products[i].price;
+        // }
+        // console.log(sum);
+        ///////////////////////////////////과제 1
+        ///////////////////////////////////과제 2
+        function Student(name, korean, english, math, science)
+        {
+            this.name = name;
+            this.korean = korean
+            this.english = english
+            this.math = math
+            this.science = science
+            Student.prototype.sum=function()
+            {
+                let sum_temp = this.korean+this.english+this.math+this.science;
+                return sum_temp;
+            }
+            Student.prototype.ave=function()
+            {
+                let ave_temp = this.sum()/4;
+                return ave_temp;
+            }
+            Student.prototype.print_info=function()
+            {
+                console.log(this.name+"의 총합 : "+this.sum()+" 평균 : " +this.ave());
+            }
+            // this.sum=function()
+            // {
+            //     let sum_temp = this.korean+this.english+this.math+this.science;
+            //     return sum_temp;
+            // }
+            // this.ave=function()
+            // {
+            //     let ave_temp = this.sum()/4;
+            //     return ave_temp;
+            // }
+            // this.print_info=function()
+            // {
+            //     console.log(this.name+"의 총합 : "+this.sum()+" 평균 : " +this.ave());
+            // }
+        }
+
+        let class1 = [
+        new Student("홍길동",100,87,93,94),
+        new Student("홍길은",100,87,93,94),
+        new Student("홍길금",100,87,93,94)
+        ]
+        // class1.push(new Student("홍길동",100,87,93,94));
+        // class1.push(new Student("이순신",65,85,75,76));
+        // class1.push(new Student("강감찬",89.5,88,80,97.5));
+        // class1.push(new Student("고수레",72,85,83,74));
+        // class1.push(new Student("오흠",76,70,80,75));
+
+        for(let i in class1)
+        {
+            class1[i].print_info();
+        }
+        ///////////////////////////////////과제 2
+    </script>
+</body>
+</html>

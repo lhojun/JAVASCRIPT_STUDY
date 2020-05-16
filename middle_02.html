@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>middle_02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let reg = /^[0-9]+(\+|\-|\/|\*)[0-9]+$/;
+		function calc(expre)
+		{
+			var char = expre.split('+');
+			if(char.length == 2)
+			{
+				return Number(char[0])+Number(char[1]);
+			}
+			var char = expre.split('-');
+			if(char.length == 2)
+			{
+				return Number(char[0])-Number(char[1]);
+			}
+			var char = expre.split('*');
+			if(char.length == 2)
+			{
+				return Number(char[0])*Number(char[1]);
+			}
+			var char = expre.split('/');
+			if(char.length == 2)
+			{
+				return Number(char[0])/Number(char[1]);
+			}
+		};
+		while(true)
+		{
+			let expr = prompt("Enter the Expression","");
+			if(expr == null)
+			{
+				break;
+			}
+			else
+			{
+				if(reg.test(expr))
+				{
+					let ans = calc(expr);
+					console.log(ans);
+				}
+				else
+				{
+					alert("잘못된 입력!");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// let array = [52, 273, 32, 64, 72];
+		// array.forEach((item,index)=>
+		// {
+		// 	console.log(index+"번째 요소는 "+item+"입니다.");
+		// });
+
+		// let out = array.map((item, index)=>
+		// {
+		// 	console.log(item);
+		// 	return item*item;
+		// });
+		// console.log(out);
+
+		// let array = [52, 273, 32, 64, 72];
+		// let out = array.filter((item,index)=>
+		// {
+		// 	return item%2==0
+		// });
+		// out.forEach((item,index)=>
+		// {
+		// 	console.log(item);
+		// });
+
+		// let str = new String('Hello my name is D');
+		// String.prototype.contain = function(input)
+		// {
+		// 	return this.indexOf(input)>-1;
+		// };
+		// console.log(str.contain('name')); // true 리턴
+
+		// let str = new String('Hello my name is D');
+		// String.prototype.contain = function(input)
+		// {
+		// 	return this;
+		// };
+		// console.log(str.contain('name')); // 
+
+		// let str = new String('Hello my name is D');
+		// String.prototype.contain = (input)=>
+		// {
+		// 	// return this;
+		// 	return this.indexOf(input)>-1; //를 넣어도 this->window이기때문에 제대로 처리되지 않음
+		// };
+		// console.log(str.contain('name')); // this -> window.
+		// //화살표함수를 사용하면 선언 자체가 윈동에서 선언되기때문에 this가 윈도우 가르킴, 제대로 처리되지 않는것을 확인 할 수 있음
+
+		//JSON 객체
+		// 문자열은 큰 따옴표로 만듦
+		// 모든 키는 큰 따옴표로 감싸야 함
+		// 숫자, 문자열, 불 자료형만 사용할 수 있음 Undefined, NaN은 불가
+
+		// const javascriptObject = [
+		// {
+		// 	name:'윤인성',
+		// 	region: '서울'
+		// },
+		// {
+		// 	name:'윤명월',
+		// 	region:'도쿄'
+		// }
+		// ];
+
+		// // JSON.stringify() 메소드로 자바스크립트 객체를 JSON문자열로 변경
+		// const outputA = JSON.stringify(javascriptObject);
+		// const outputB = JSON.stringify(javascriptObject,null,2);
+		// console.log(typeof(outputA)); //String 
+		// console.log(outputA); //객체가 아닌 문자열로 나옴
+		// console.log(outputB); //
+		// console.log("--------------");
+		// //JSON.parse() 메소드로 JSON 문자열을 자바스크립트 객체로 변경
+		// const outputC = JSON.parse(outputB)
+		// console.log(typeof(outputC)); //Object
+
+		// function callTreeTimes(callback)
+		// {
+		// 	for(let i=0; i<3; i++)
+		// 	{
+		// 		callback();
+		// 	}
+		// }
+
+		// callTreeTimes(function(){console.log("안녕하세요");});
+		// callTreeTimes(); // 타입 에러 발생
+
+		// function callTreeTimes(callback)
+		// {
+		// 	if(callback)
+		// 	{
+		// 		for(let i=0; i<3; i++)
+		// 		{
+		// 			callback();
+		// 		}
+		// 	}
+		// 	else
+		// 	{
+		// 		console.log("매개 변수 callback이 지정되지 않았습니다.");
+		// 	}
+			
+		// }
+
+		// callTreeTimes(function(){console.log("안녕하세요");});
+		// callTreeTimes(); // 기본 예외 처리. 사전에 일어나지 않도록 방지하였음
+
+		//고급 예외처리
+		// try
+		// {
+		// 	const array = new Array(-2000);
+		// }catch(exception)
+		// {
+		// 	console.log(exception.name + "예외가 발생했습니다.");
+		// }finally
+		// {
+		// 	console.log("finally 구문이 실행되었습니다.");
+		// }
+
+		//예외 객체
+		// try
+		// {
+		// 	error.error.error();
+
+		// }
+		// catch(e)
+		// {
+		// 	console.log(e.name);
+		// 	console.log(e.message);
+		// }
+
+		// const error = new Error('메시지');
+		// error.name = '내 마음의 오류';
+		// error.message = '오류 메시지';
+
+		// throw error; // 예외를 발생 시키는 구문
+
+		// try
+		// {
+		// 	throw '예외 발생';
+		// }
+		// catch(exception)
+		// {
+		// 	console.log('예외가 발생했습니다.');
+		// 	console.log(exception);
+		// }
+
+		// try
+		// {
+		// 	const error = new Error('메시지');
+		// 	error.name = '나의 오류';
+		// 	error.message = '오류 메시지';
+		// 	throw error;
+		// }
+		// catch(exception)
+		// {
+		// 	console.log(exception.name + "예외가 발생했습니다.");
+		// 	console.log(exception.message);
+		// }
+
+		// let v = 111;
+		// const c = 'hello';
+		// console.log(v);
+		// console.log(c);
+		// const fun = ()=>
+		// {
+		// 	console.log("화살표 함수");
+		// }
+		// fun();
+
+		// const array=['가','나','다'];
+		// for(let item of array)
+		// {
+		// 	console.log(item);
+		// }
+		//ECMA6 구버전 인터넷 브라우저(인터넷 익스플로어 등)에선 사용 할 수 없다
+		
+		// window.open("http://naver.com","width=350,height=400,left=50,top=10","toolbars=no");
+
+		// let i = confirm("정말로 삭제하시겠습니까?");
+		// console.log(i);
+
+		// console.log("width " + screen.width);
+		// console.log("height " + screen.height);
+		// console.log("availWidth " + screen.availWidth);
+
+
+	</script>
+</body>
+</html>

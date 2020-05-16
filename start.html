@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let int_arr = new Array();
+        let i = 0;
+        while(true)
+        {
+            let input = prompt("정수를 입력하시오. 멈추고 싶으면 취소를 누르시오.","0");
+            if(input == null)
+            {
+                for(let j in int_arr)
+                {
+                    console.log(int_arr[j]);
+                }
+                break;
+            }
+            else
+            {
+                int_arr[i] = input;
+            }
+            i++;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>start</h1>
+</body>
+</html>

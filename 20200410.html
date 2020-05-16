@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fruit=['사과','바나나','망고','딸기'];
+        // console.log(fruit[0]);
+        // console.log(fruit[1]);
+        //
+        // 객체는 중괄호 활용하여 생성함
+        // let product={
+        //     제품명 : '7D 건조 망고',
+        //     유형 : '당절임',
+        //     성분 : '망고, 설탕, 메타주아황산나트륨, 치자황색소',
+        //     원산지 : '필리핀'
+        // };
+        // console.log(product);
+        // console.log(product['제품명']);
+        // console.log(product['유형']);
+        // console.log(product.제품명);
+        // console.log(product.유형);
+        // for(let i in product)
+        // {
+        //     console.log(i+" : "+product[i]);
+        // }
+        // let fruit=['사과','바나나','망고','딸기'];
+        // for(let i in fruit)
+        // {
+        //     console.log(i+" : "+fruit[i]+typeof(i));
+        // }
+        // let product={
+        //     제품명 : '7D 건조 망고',
+        //     유형 : '당절임',
+        //     성분 : '망고, 설탕, 메타주아황산나트륨, 치자황색소',
+        //     원산지 : '필리핀'
+        // };
+        // if(!('가격'in product))
+        // {
+        //     product.가격 = 1000;
+        // }
+        // for(let k in product)
+        // {
+        //     console.log(product[k]);
+        // }
+        // console.log('가격' in product);
+        // let product={
+        //     제품명 : '7D 건조 망고',
+        //     유형 : '당절임',
+        //     성분 : '망고, 설탕, 메타주아황산나트륨, 치자황색소',
+        //     원산지 : '필리핀'
+        // };
+        // with(product){
+        //     제품명 = 'candy';
+        //     유형 = '사탕';
+        //     성분 = '딸기, 설탕, 색소';
+        //     원산지 = '한국';
+        // }
+        // delete(product.원산지);
+        // for(let i in product)
+        // {
+        //     console.log(product[i]);
+        // }
+        // let object={
+        //     name : '바나나',
+        //     price : 1200,
+        //     print : function(){
+        //         console.log(this.name+"의 가격은 "+this.price+"입니다.");
+        //     }
+        // };
+        // object.print();
+
+        // let person={
+        //     name : "홍길동",
+        //     eat : function(food)
+        //     {
+        //         console.log(this.name+"이 "+food+"을 먹습니다.");
+        //     }
+        // }
+        // person.eat('카카오');
+
+        // let products=[];
+        
+        // products.push({name:'바나나',price:1200});
+        // products.push({name:'사과',price:2000});
+        // products.push({name:'배',price:3000});
+        // products.push({name:'고구마',price:700});
+        // products.push({name:'감자',price:600});
+        // products.push({name:'수박',price:5000});
+
+        // let sum = 0;
+        // for(let i in products)
+        // {
+        //     console.log(products[i].name);
+        //     sum += products[i].price;
+        // }
+        // console.log(sum);
+
+        // function Product (name, price)
+        // {
+        //     this.name = name;
+        //     this.price = price;
+        // }
+        // let product = new Product('바나나',2000);
+        // let product1 = new Product('사과',1500);
+
+        // console.log(product);
+        // console.log(product1);
+
+        // function Product(name, price)
+        // {
+        //     this.name = name;
+        //     this.price = price;
+        //     this.print_price=function()
+        //     {
+        //         console.log("price = "+this.price);
+        //     }
+        //     this.print_name=function()
+        //     {
+        //         console.log("name = "+this.name);
+        //     }
+        // }
+
+        // let product = new Product('바나나',2000);
+        // let product1 = new Product('사과',1500);
+
+        // product.print_name();
+        // product1.print_name();
+        // ///////////////////////////////////과제 2
+        // function Student(name, korean, english, math, science)
+        // {
+        //     this.name = name;
+        //     this.korean = korean
+        //     this.english = english
+        //     this.math = math
+        //     this.science = science
+        //     Student.prototype.sum=function()
+        //     {
+        //         let sum_temp = this.korean+this.english+this.math+this.science;
+        //         return sum_temp;
+        //     }
+        //     Student.prototype.ave=function()
+        //     {
+        //         let ave_temp = this.sum()/4;
+        //         return ave_temp;
+        //     }
+        //     Student.prototype.print_info=function()
+        //     {
+        //         console.log(this.name+"의 총합 : "+this.sum()+" 평균 : " +this.ave());
+        //     }
+        // }
+
+        // let class1 = []
+        // class1.push(new Student("홍길동",100,87,93,94));
+        // class1.push(new Student("이순신",65,85,75,76));
+        // class1.push(new Student("강감찬",89.5,88,80,97.5));
+        // class1.push(new Student("고수레",72,85,83,74));
+        // class1.push(new Student("오흠",76,70,80,75));
+
+        // for(let i in class1)
+        // {
+        //     class1[i].print_info();
+        // }
+        // ///////////////////////////////////과제 2
+
+        // function Product(name, price)
+        // {
+        //     this.name = name;
+        //     this.price = price;
+        //     Product.prototype.print_price=function()//소스는 별 차이 없으니 메모리 입장에서 차이가 생긴다고 한다.. 
+        //     {
+        //         console.log("price = "+this.price);
+        //     }
+        //     Product.prototype.print_name=function()
+        //     {
+        //         console.log("name = "+this.name);
+        //     }
+        // }
+        // let product = new Product('바나나',2000);
+        // let product1 = new Product('사과',1500);
+
+        // product.print_name();
+        // product1.print_name();
+
+
+    </script>
+</body>
+</html>

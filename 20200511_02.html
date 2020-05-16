@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script type="text/javascript">
+		alert('process-0'); //1
+	</script>
+</head>
+<body>
+	<h1>process-1</h1> <!-- 1.5?.. -->
+	<script type="text/javascript">
+		alert('process-2'); //2
+	</script>
+	<h1>process-2</h1> <!-- 2.5?.. -->
+	<script type="text/javascript">
+		alert('process-3'); //3
+	</script>
+
+	<!-- 위 -> 아래로 실행되는것을 알 수 있음. -->
+
+
+
+</body>
+</html>
